@@ -89,7 +89,8 @@ public class PilihGambarButton extends javax.swing.JFrame {
 
     private void javaeeBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_javaeeBTActionPerformed
         // TODO add your handling code here:
-        
+        CardLayout cl = (CardLayout)(imagePanel.getLayout());
+        cl.show(imagePanel, "1");
     }//GEN-LAST:event_javaeeBTActionPerformed
 
     /**
