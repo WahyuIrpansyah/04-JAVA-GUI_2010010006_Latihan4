@@ -36,7 +36,7 @@ public class PilihGambarButtonFullScreen extends javax.swing.JFrame {
         javaeeBT = new javax.swing.JButton();
         postgresqlBT = new javax.swing.JButton();
         exitBT = new javax.swing.JButton();
-        imagePanel = new javax.swing.JPanel();
+        pilihan = new javax.swing.JPanel();
         postgresqlLB = new javax.swing.JLabel();
         javaeeLB = new javax.swing.JLabel();
         glasfishLB = new javax.swing.JLabel();
@@ -78,40 +78,40 @@ public class PilihGambarButtonFullScreen extends javax.swing.JFrame {
 
         getContentPane().add(buttonPanel, java.awt.BorderLayout.PAGE_START);
 
-        imagePanel.setLayout(new java.awt.CardLayout());
+        pilihan.setLayout(new java.awt.CardLayout());
 
         postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/postgresql.jpg"))); // NOI18N
         postgresqlLB.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         postgresqlLB.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        imagePanel.add(postgresqlLB, "2");
+        pilihan.add(postgresqlLB, "2");
 
         javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/javaee.jpg"))); // NOI18N
-        imagePanel.add(javaeeLB, "1");
+        pilihan.add(javaeeLB, "1");
 
         glasfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
-        imagePanel.add(glasfishLB, "0");
+        pilihan.add(glasfishLB, "0");
 
-        getContentPane().add(imagePanel, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(pilihan, java.awt.BorderLayout.LINE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void glassfishBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_glassfishBTActionPerformed
         // TODO add your handling code here:
-        CardLayout cl = (CardLayout)(imagePanel.getLayout());
-        cl.show(imagePanel, "0");
+        CardLayout cl = (CardLayout)(pilihan.getLayout());
+        cl.show(pilihan, "0");
     }//GEN-LAST:event_glassfishBTActionPerformed
 
     private void javaeeBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_javaeeBTActionPerformed
         // TODO add your handling code here:
-        CardLayout cl = (CardLayout)(imagePanel.getLayout());
-        cl.show(imagePanel, "1");
+        CardLayout cl = (CardLayout)(pilihan.getLayout());
+        cl.show(pilihan, "1");
     }//GEN-LAST:event_javaeeBTActionPerformed
 
     private void postgresqlBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postgresqlBTActionPerformed
         // TODO add your handling code here:
-        CardLayout cl = (CardLayout)(imagePanel.getLayout());
-        cl.show(imagePanel, "2");
+        CardLayout cl = (CardLayout)(pilihan.getLayout());
+        cl.show(pilihan, "2");
     
     }//GEN-LAST:event_postgresqlBTActionPerformed
 
@@ -143,9 +143,9 @@ public class PilihGambarButtonFullScreen extends javax.swing.JFrame {
     private javax.swing.JButton exitBT;
     private javax.swing.JLabel glasfishLB;
     private javax.swing.JButton glassfishBT;
-    private javax.swing.JPanel imagePanel;
     private javax.swing.JButton javaeeBT;
     private javax.swing.JLabel javaeeLB;
+    private javax.swing.JPanel pilihan;
     private javax.swing.JButton postgresqlBT;
     private javax.swing.JLabel postgresqlLB;
     // End of variables declaration//GEN-END:variables

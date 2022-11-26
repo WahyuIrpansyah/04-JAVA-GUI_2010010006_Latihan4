@@ -42,7 +42,6 @@ public class PilihGambarButton extends javax.swing.JFrame {
         javaeeLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         glassfishBT.setText("GlassFish");
         glassfishBT.addActionListener(new java.awt.event.ActionListener() {
@@ -127,13 +126,6 @@ public class PilihGambarButton extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                PilihGambarButton fullFrame = new PilihGambarButton();
-            
-                    GraphicsDevice device =
-                        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-                    device.setFullScreenWindow(fullFrame);
-                    
-                    fullFrame.setVisible(true);
             }
         });
     }
