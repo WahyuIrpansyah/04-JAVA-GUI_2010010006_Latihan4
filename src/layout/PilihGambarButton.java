@@ -29,30 +29,17 @@ public class PilihGambarButton extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        imagePanel = new javax.swing.JPanel();
-        glasfishLB = new javax.swing.JLabel();
-        postgresqlLB = new javax.swing.JLabel();
-        javaeeLB = new javax.swing.JLabel();
         buttonPanel = new javax.swing.JPanel();
         glassfishBT = new javax.swing.JButton();
         javaeeBT = new javax.swing.JButton();
         postgresqlBT = new javax.swing.JButton();
         exitBT = new javax.swing.JButton();
+        imagePanel = new javax.swing.JPanel();
+        glasfishLB = new javax.swing.JLabel();
+        postgresqlLB = new javax.swing.JLabel();
+        javaeeLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        imagePanel.setLayout(new java.awt.CardLayout());
-
-        glasfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
-        imagePanel.add(glasfishLB, "0");
-
-        postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/postgresql.jpg"))); // NOI18N
-        imagePanel.add(postgresqlLB, "2");
-
-        javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/javaee.jpg"))); // NOI18N
-        imagePanel.add(javaeeLB, "1");
-
-        getContentPane().add(imagePanel, java.awt.BorderLayout.PAGE_START);
 
         glassfishBT.setText("GlassFish");
         glassfishBT.addActionListener(new java.awt.event.ActionListener() {
@@ -79,9 +66,29 @@ public class PilihGambarButton extends javax.swing.JFrame {
         buttonPanel.add(postgresqlBT);
 
         exitBT.setText("Exit");
+        exitBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTActionPerformed(evt);
+            }
+        });
         buttonPanel.add(exitBT);
 
-        getContentPane().add(buttonPanel, java.awt.BorderLayout.CENTER);
+        getContentPane().add(buttonPanel, java.awt.BorderLayout.PAGE_START);
+
+        imagePanel.setLayout(new java.awt.CardLayout());
+
+        glasfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
+        imagePanel.add(glasfishLB, "0");
+
+        postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/postgresql.jpg"))); // NOI18N
+        postgresqlLB.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        postgresqlLB.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        imagePanel.add(postgresqlLB, "2");
+
+        javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/javaee.jpg"))); // NOI18N
+        imagePanel.add(javaeeLB, "1");
+
+        getContentPane().add(imagePanel, java.awt.BorderLayout.LINE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,7 +109,13 @@ public class PilihGambarButton extends javax.swing.JFrame {
         // TODO add your handling code here:
         CardLayout cl = (CardLayout)(imagePanel.getLayout());
         cl.show(imagePanel, "2");
+    
     }//GEN-LAST:event_postgresqlBTActionPerformed
+
+    private void exitBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitBTActionPerformed
 
     /**
      * @param args the command line arguments
