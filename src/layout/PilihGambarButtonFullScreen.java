@@ -13,12 +13,12 @@ import java.awt.GraphicsEnvironment;
  *
  * @author ACER
  */
-public class PilihGambarButton extends javax.swing.JFrame {
+public class PilihGambarButtonFullScreen extends javax.swing.JFrame {
 
     /**
      * Creates new form PilihGambarButton
      */
-    public PilihGambarButton() {
+    public PilihGambarButtonFullScreen() {
         initComponents();
     }
 
@@ -37,9 +37,9 @@ public class PilihGambarButton extends javax.swing.JFrame {
         postgresqlBT = new javax.swing.JButton();
         exitBT = new javax.swing.JButton();
         imagePanel = new javax.swing.JPanel();
-        glasfishLB = new javax.swing.JLabel();
         postgresqlLB = new javax.swing.JLabel();
         javaeeLB = new javax.swing.JLabel();
+        glasfishLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -80,9 +80,6 @@ public class PilihGambarButton extends javax.swing.JFrame {
 
         imagePanel.setLayout(new java.awt.CardLayout());
 
-        glasfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
-        imagePanel.add(glasfishLB, "0");
-
         postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/postgresql.jpg"))); // NOI18N
         postgresqlLB.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         postgresqlLB.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -90,6 +87,9 @@ public class PilihGambarButton extends javax.swing.JFrame {
 
         javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/javaee.jpg"))); // NOI18N
         imagePanel.add(javaeeLB, "1");
+
+        glasfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
+        imagePanel.add(glasfishLB, "0");
 
         getContentPane().add(imagePanel, java.awt.BorderLayout.LINE_START);
 
@@ -127,7 +127,7 @@ public class PilihGambarButton extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 
-                PilihGambarButton fullFrame = new PilihGambarButton();
+                PilihGambarButtonFullScreen fullFrame = new PilihGambarButtonFullScreen();
             
                     GraphicsDevice device =
                         GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
