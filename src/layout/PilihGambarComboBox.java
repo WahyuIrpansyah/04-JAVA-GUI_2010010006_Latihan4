@@ -54,14 +54,15 @@ public class PilihGambarComboBox extends javax.swing.JFrame {
 
         pCardLayout.setLayout(new java.awt.CardLayout());
 
+        glassfishLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         glassfishLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/glassfish.jpg"))); // NOI18N
-        pCardLayout.add(glassfishLB, "card2");
+        pCardLayout.add(glassfishLB, "0");
 
         javaeeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/javaee.jpg"))); // NOI18N
-        pCardLayout.add(javaeeLB, "card2");
+        pCardLayout.add(javaeeLB, "1");
 
         postgresqlLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/layout/postgresql.jpg"))); // NOI18N
-        pCardLayout.add(postgresqlLB, "card2");
+        pCardLayout.add(postgresqlLB, "2");
 
         getContentPane().add(pCardLayout, java.awt.BorderLayout.PAGE_END);
 
